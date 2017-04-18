@@ -1,0 +1,3961 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/serratus/quaggaJS#readme">quagga (v0.11.6)</a>
+</h1>
+<h4>An advanced barcode-scanner written in JavaScript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga">module quagga</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">quagga.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.Gruntfile">
+            function <span class="apidocSignatureSpan">quagga.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper
+            <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.convolve
+            <span class="apidocSignatureSpan">(kernel)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.copyTo
+            <span class="apidocSignatureSpan">(imageWrapper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.get">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.get
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.getSafe
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.inImageWithBorder
+            <span class="apidocSignatureSpan">(imgRef, border)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.invert
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.moments
+            <span class="apidocSignatureSpan">(labelcount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.overlay
+            <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.set">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.set
+            <span class="apidocSignatureSpan">(x, y, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.show">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.show
+            <span class="apidocSignatureSpan">(canvas, scale)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.subImage
+            <span class="apidocSignatureSpan">(from, size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.subImageAsCopy
+            <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder">
+            function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.zeroBorder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.decodeSingle">
+            function <span class="apidocSignatureSpan">quagga.</span>default.decodeSingle
+            <span class="apidocSignatureSpan">(config, resultCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.init">
+            function <span class="apidocSignatureSpan">quagga.</span>default.init
+            <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offDetected">
+            function <span class="apidocSignatureSpan">quagga.</span>default.offDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offProcessed">
+            function <span class="apidocSignatureSpan">quagga.</span>default.offProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onDetected">
+            function <span class="apidocSignatureSpan">quagga.</span>default.onDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onProcessed">
+            function <span class="apidocSignatureSpan">quagga.</span>default.onProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.pause">
+            function <span class="apidocSignatureSpan">quagga.</span>default.pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.registerResultCollector">
+            function <span class="apidocSignatureSpan">quagga.</span>default.registerResultCollector
+            <span class="apidocSignatureSpan">(resultCollector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.setReaders">
+            function <span class="apidocSignatureSpan">quagga.</span>default.setReaders
+            <span class="apidocSignatureSpan">(readers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.start">
+            function <span class="apidocSignatureSpan">quagga.</span>default.start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.stop">
+            function <span class="apidocSignatureSpan">quagga.</span>default.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.uglyasm">
+            function <span class="apidocSignatureSpan">quagga.</span>uglyasm
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>default.CameraAccess</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>default.ImageDebug</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>default.ResultCollector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.</span>input_stream</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.Gruntfile">module quagga.Gruntfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.Gruntfile.Gruntfile">
+            function <span class="apidocSignatureSpan">quagga.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default">module quagga.default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper">
+            function <span class="apidocSignatureSpan">quagga.default.</span>ImageWrapper
+            <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.decodeSingle">
+            function <span class="apidocSignatureSpan">quagga.default.</span>decodeSingle
+            <span class="apidocSignatureSpan">(config, resultCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.init">
+            function <span class="apidocSignatureSpan">quagga.default.</span>init
+            <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offDetected">
+            function <span class="apidocSignatureSpan">quagga.default.</span>offDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offProcessed">
+            function <span class="apidocSignatureSpan">quagga.default.</span>offProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onDetected">
+            function <span class="apidocSignatureSpan">quagga.default.</span>onDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onProcessed">
+            function <span class="apidocSignatureSpan">quagga.default.</span>onProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.pause">
+            function <span class="apidocSignatureSpan">quagga.default.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.registerResultCollector">
+            function <span class="apidocSignatureSpan">quagga.default.</span>registerResultCollector
+            <span class="apidocSignatureSpan">(resultCollector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.setReaders">
+            function <span class="apidocSignatureSpan">quagga.default.</span>setReaders
+            <span class="apidocSignatureSpan">(readers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.start">
+            function <span class="apidocSignatureSpan">quagga.default.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.stop">
+            function <span class="apidocSignatureSpan">quagga.default.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.default.</span>CameraAccess</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.default.</span>ImageDebug</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.default.</span>ResultCollector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">quagga.default.</span>canvas</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.CameraAccess">module quagga.default.CameraAccess</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.CameraAccess.enumerateVideoDevices">
+            function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>enumerateVideoDevices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.CameraAccess.getActiveStreamLabel">
+            function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>getActiveStreamLabel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.CameraAccess.release">
+            function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>release
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.CameraAccess.request">
+            function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>request
+            <span class="apidocSignatureSpan">(video, videoConstraints)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageDebug">module quagga.default.ImageDebug</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageDebug.drawImage">
+            function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawImage
+            <span class="apidocSignatureSpan">(imageData, size, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageDebug.drawPath">
+            function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawPath
+            <span class="apidocSignatureSpan">(path, def, ctx, style)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageDebug.drawRect">
+            function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawRect
+            <span class="apidocSignatureSpan">(pos, size, ctx, style)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper">module quagga.default.ImageWrapper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.ImageWrapper">
+            function <span class="apidocSignatureSpan">quagga.default.</span>ImageWrapper
+            <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.clearArray">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.</span>clearArray
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.sample">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.</span>sample
+            <span class="apidocSignatureSpan">(inImg, x, y)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype">module quagga.default.ImageWrapper.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>convolve
+            <span class="apidocSignatureSpan">(kernel)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>copyTo
+            <span class="apidocSignatureSpan">(imageWrapper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.get">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>get
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>getSafe
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>inImageWithBorder
+            <span class="apidocSignatureSpan">(imgRef, border)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>invert
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>moments
+            <span class="apidocSignatureSpan">(labelcount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>overlay
+            <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.set">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>set
+            <span class="apidocSignatureSpan">(x, y, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.show">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>show
+            <span class="apidocSignatureSpan">(canvas, scale)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImage
+            <span class="apidocSignatureSpan">(from, size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImageAsCopy
+            <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>zeroBorder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.convolve">module quagga.default.ImageWrapper.prototype.convolve</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve.convolve">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>convolve
+            <span class="apidocSignatureSpan">(kernel)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.copyTo">module quagga.default.ImageWrapper.prototype.copyTo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo.copyTo">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>copyTo
+            <span class="apidocSignatureSpan">(imageWrapper)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.get">module quagga.default.ImageWrapper.prototype.get</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.get.get">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>get
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.getSafe">module quagga.default.ImageWrapper.prototype.getSafe</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe.getSafe">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>getSafe
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.inImageWithBorder">module quagga.default.ImageWrapper.prototype.inImageWithBorder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder.inImageWithBorder">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>inImageWithBorder
+            <span class="apidocSignatureSpan">(imgRef, border)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.invert">module quagga.default.ImageWrapper.prototype.invert</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert.invert">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>invert
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.moments">module quagga.default.ImageWrapper.prototype.moments</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments.moments">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>moments
+            <span class="apidocSignatureSpan">(labelcount)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.overlay">module quagga.default.ImageWrapper.prototype.overlay</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay.overlay">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>overlay
+            <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.set">module quagga.default.ImageWrapper.prototype.set</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.set.set">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>set
+            <span class="apidocSignatureSpan">(x, y, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.show">module quagga.default.ImageWrapper.prototype.show</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.show.show">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>show
+            <span class="apidocSignatureSpan">(canvas, scale)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.subImage">module quagga.default.ImageWrapper.prototype.subImage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage.subImage">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImage
+            <span class="apidocSignatureSpan">(from, size)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.subImageAsCopy">module quagga.default.ImageWrapper.prototype.subImageAsCopy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy.subImageAsCopy">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImageAsCopy
+            <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.zeroBorder">module quagga.default.ImageWrapper.prototype.zeroBorder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder.zeroBorder">
+            function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>zeroBorder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.ResultCollector">module quagga.default.ResultCollector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.ResultCollector.create">
+            function <span class="apidocSignatureSpan">quagga.default.ResultCollector.</span>create
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.decodeSingle">module quagga.default.decodeSingle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.decodeSingle.decodeSingle">
+            function <span class="apidocSignatureSpan">quagga.default.</span>decodeSingle
+            <span class="apidocSignatureSpan">(config, resultCallback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.init">module quagga.default.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.init.init">
+            function <span class="apidocSignatureSpan">quagga.default.</span>init
+            <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.offDetected">module quagga.default.offDetected</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offDetected.offDetected">
+            function <span class="apidocSignatureSpan">quagga.default.</span>offDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.offProcessed">module quagga.default.offProcessed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.offProcessed.offProcessed">
+            function <span class="apidocSignatureSpan">quagga.default.</span>offProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.onDetected">module quagga.default.onDetected</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onDetected.onDetected">
+            function <span class="apidocSignatureSpan">quagga.default.</span>onDetected
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.onProcessed">module quagga.default.onProcessed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.onProcessed.onProcessed">
+            function <span class="apidocSignatureSpan">quagga.default.</span>onProcessed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.pause">module quagga.default.pause</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.pause.pause">
+            function <span class="apidocSignatureSpan">quagga.default.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.registerResultCollector">module quagga.default.registerResultCollector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.registerResultCollector.registerResultCollector">
+            function <span class="apidocSignatureSpan">quagga.default.</span>registerResultCollector
+            <span class="apidocSignatureSpan">(resultCollector)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.setReaders">module quagga.default.setReaders</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.setReaders.setReaders">
+            function <span class="apidocSignatureSpan">quagga.default.</span>setReaders
+            <span class="apidocSignatureSpan">(readers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.start">module quagga.default.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.start.start">
+            function <span class="apidocSignatureSpan">quagga.default.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.default.stop">module quagga.default.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.default.stop.stop">
+            function <span class="apidocSignatureSpan">quagga.default.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.input_stream">module quagga.input_stream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.input_stream.createImageStream">
+            function <span class="apidocSignatureSpan">quagga.input_stream.</span>createImageStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.quagga.uglyasm">module quagga.uglyasm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.quagga.uglyasm.uglyasm">
+            function <span class="apidocSignatureSpan">quagga.</span>uglyasm
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga" id="apidoc.module.quagga">module quagga</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.Gruntfile" id="apidoc.element.quagga.Gruntfile">
+        function <span class="apidocSignatureSpan">quagga.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            },
+            integration: {
+                configFile: 'karma-integration.conf.js'
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-karma');
+
+    grunt.loadTasks('tasks');
+
+    grunt.registerTask('test', ['karma']);
+    grunt.registerTask('integrationtest', ['karma:integration']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper" id="apidoc.element.quagga.default.ImageWrapper">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper
+        <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImageWrapper(size, data, ArrayType, initialize) {
+    if (!data) {
+        if (ArrayType) {
+            this.data = new ArrayType(size.x * size.y);
+            if (ArrayType === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        } else {
+            this.data = new Uint8Array(size.x * size.y);
+            if (Uint8Array === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        }
+    } else {
+        this.data = data;
+    }
+    this.size = size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve" id="apidoc.element.quagga.default.ImageWrapper.prototype.convolve">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.convolve
+        <span class="apidocSignatureSpan">(kernel)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.convolve = function (kernel) {
+    var x,
+        y,
+        kx,
+        ky,
+        kSize = kernel.length / 2 | 0,
+        accu = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            accu = 0;
+            for (ky = -kSize; ky &lt;= kSize; ky++) {
+                for (kx = -kSize; kx &lt;= kSize; kx++) {
+                    accu += kernel[ky + kSize][kx + kSize] * this.getSafe(x + kx, y + ky);
+                }
+            }
+            this.data[y * this.size.x + x] = accu;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo" id="apidoc.element.quagga.default.ImageWrapper.prototype.copyTo">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.copyTo
+        <span class="apidocSignatureSpan">(imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.copyTo = function (imageWrapper) {
+    var length = this.data.length,
+        srcData = this.data,
+        dstData = imageWrapper.data;
+
+    while (length--) {
+        dstData[length] = srcData[length];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.get" id="apidoc.element.quagga.default.ImageWrapper.prototype.get">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.get
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.get = function (x, y) {
+    return this.data[y * this.size.x + x];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe" id="apidoc.element.quagga.default.ImageWrapper.prototype.getSafe">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.getSafe
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.getSafe = function (x, y) {
+    var i;
+
+    if (!this.indexMapping) {
+        this.indexMapping = {
+            x: [],
+            y: []
+        };
+        for (i = 0; i &lt; this.size.x; i++) {
+            this.indexMapping.x[i] = i;
+            this.indexMapping.x[i + this.size.x] = i;
+        }
+        for (i = 0; i &lt; this.size.y; i++) {
+            this.indexMapping.y[i] = i;
+            this.indexMapping.y[i + this.size.y] = i;
+        }
+    }
+    return this.data[this.indexMapping.y[y + this.size.y] * this.size.x + this.indexMapping.x[x + this.size.x]];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.inImageWithBorder
+        <span class="apidocSignatureSpan">(imgRef, border)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.inImageWithBorder = function (imgRef, border) {
+    return imgRef.x &gt;= border &amp;&amp; imgRef.y &gt;= border &amp;&amp; imgRef.x &lt; this.size.x - border &amp;&amp; imgRef.y &lt; this.size.y - border;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert" id="apidoc.element.quagga.default.ImageWrapper.prototype.invert">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.invert
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.invert = function () {
+    var data = this.data,
+        length = data.length;
+
+    while (length--) {
+        data[length] = data[length] ? 0 : 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments" id="apidoc.element.quagga.default.ImageWrapper.prototype.moments">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.moments
+        <span class="apidocSignatureSpan">(labelcount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.moments = function (labelcount) {
+    var data = this.data,
+        x,
+        y,
+        height = this.size.y,
+        width = this.size.x,
+        val,
+        ysq,
+        labelsum = [],
+        i,
+        label,
+        mu11,
+        mu02,
+        mu20,
+        x_,
+        y_,
+        tmp,
+        result = [],
+        PI = Math.PI,
+        PI_4 = PI / 4;
+
+    if (labelcount &lt;= 0) {
+        return result;
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        labelsum[i] = {
+            m00: 0,
+            m01: 0,
+            m10: 0,
+            m11: 0,
+            m02: 0,
+            m20: 0,
+            theta: 0,
+            rad: 0
+        };
+    }
+
+    for (y = 0; y &lt; height; y++) {
+        ysq = y * y;
+        for (x = 0; x &lt; width; x++) {
+            val = data[y * width + x];
+            if (val &gt; 0) {
+                label = labelsum[val - 1];
+                label.m00 += 1;
+                label.m01 += y;
+                label.m10 += x;
+                label.m11 += x * y;
+                label.m02 += ysq;
+                label.m20 += x * x;
+            }
+        }
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        label = labelsum[i];
+        if (!isNaN(label.m00) &amp;&amp; label.m00 !== 0) {
+            x_ = label.m10 / label.m00;
+            y_ = label.m01 / label.m00;
+            mu11 = label.m11 / label.m00 - x_ * y_;
+            mu02 = label.m02 / label.m00 - y_ * y_;
+            mu20 = label.m20 / label.m00 - x_ * x_;
+            tmp = (mu02 - mu20) / (2 * mu11);
+            tmp = 0.5 * Math.atan(tmp) + (mu11 &gt;= 0 ? PI_4 : -PI_4) + PI;
+            label.theta = (tmp * 180 / PI + 90) % 180 - 90;
+            if (label.theta &lt; 0) {
+                label.theta += 180;
+            }
+            label.rad = tmp &gt; PI ? tmp - PI : tmp;
+            label.vec = vec2.clone([Math.cos(tmp), Math.sin(tmp)]);
+            result.push(label);
+        }
+    }
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay" id="apidoc.element.quagga.default.ImageWrapper.prototype.overlay">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.overlay
+        <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.overlay = function (canvas, scale, from) {
+    if (!scale || scale &lt; 0 || scale &gt; 360) {
+        scale = 360;
+    }
+    var hsv = [0, 1, 1];
+    var rgb = [0, 0, 0];
+    var whiteRgb = [255, 255, 255];
+    var blackRgb = [0, 0, 0];
+    var result = [];
+    var ctx = canvas.getContext('2d');
+    var frame = ctx.getImageData(from.x, from.y, this.size.x, this.size.y);
+    var data = frame.data;
+    var length = this.data.length;
+    while (length--) {
+        hsv[0] = this.data[length] * scale;
+        result = hsv[0] &lt;= 0 ? whiteRgb : hsv[0] &gt;= 360 ? blackRgb : (0, _cv_utils.hsv2rgb)(hsv, rgb);
+        data[length * 4 + 0] = result[0];
+        data[length * 4 + 1] = result[1];
+        data[length * 4 + 2] = result[2];
+        data[length * 4 + 3] = 255;
+    }
+    ctx.putImageData(frame, from.x, from.y);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.set" id="apidoc.element.quagga.default.ImageWrapper.prototype.set">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.set
+        <span class="apidocSignatureSpan">(x, y, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.set = function (x, y, value) {
+    this.data[y * this.size.x + x] = value;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.show" id="apidoc.element.quagga.default.ImageWrapper.prototype.show">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.show
+        <span class="apidocSignatureSpan">(canvas, scale)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.show = function (canvas, scale) {
+    var ctx, frame, data, current, pixel, x, y;
+
+    if (!scale) {
+        scale = 1.0;
+    }
+    ctx = canvas.getContext('2d');
+    canvas.width = this.size.x;
+    canvas.height = this.size.y;
+    frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    data = frame.data;
+    current = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            pixel = y * this.size.x + x;
+            current = this.get(x, y) * scale;
+            data[pixel * 4 + 0] = current;
+            data[pixel * 4 + 1] = current;
+            data[pixel * 4 + 2] = current;
+            data[pixel * 4 + 3] = 255;
+        }
+    }
+    //frame.data = data;
+    ctx.putImageData(frame, 0, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImage">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.subImage
+        <span class="apidocSignatureSpan">(from, size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.subImage = function (from, size) {
+    return new _subImage2.default(from, size, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.subImageAsCopy
+        <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.subImageAsCopy = function (imageWrapper, from) {
+    var sizeY = imageWrapper.size.y,
+        sizeX = imageWrapper.size.x;
+    var x, y;
+    for (x = 0; x &lt; sizeX; x++) {
+        for (y = 0; y &lt; sizeY; y++) {
+            imageWrapper.data[y * sizeX + x] = this.data[(from.y + y) * this.size.x + from.x + x];
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder">
+        function <span class="apidocSignatureSpan">quagga.</span>default.ImageWrapper.prototype.zeroBorder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default.ImageWrapper.prototype.zeroBorder = function () {
+    var i,
+        width = this.size.x,
+        height = this.size.y,
+        data = this.data;
+    for (i = 0; i &lt; width; i++) {
+        data[i] = data[(height - 1) * width + i] = 0;
+    }
+    for (i = 1; i &lt; height - 1; i++) {
+        data[i * width] = data[i * width + (width - 1)] = 0;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.decodeSingle" id="apidoc.element.quagga.default.decodeSingle">
+        function <span class="apidocSignatureSpan">quagga.</span>default.decodeSingle
+        <span class="apidocSignatureSpan">(config, resultCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeSingle(config, resultCallback) {
+    var _this = this;
+
+    config = (0, _merge3.default)({
+        inputStream: {
+            type: "ImageStream",
+            sequence: false,
+            size: 800,
+            src: config.src
+        },
+        numOfWorkers:  false ? 0 : 1,
+        locator: {
+            halfSample: false
+        }
+    }, config);
+    this.init(config, function () {
+        _events2.default.once("processed", function (result) {
+            _this.stop();
+            resultCallback.call(null, result);
+        }, true);
+        _start();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.init" id="apidoc.element.quagga.default.init">
+        function <span class="apidocSignatureSpan">quagga.</span>default.init
+        <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(config, cb, imageWrapper) {
+    _config = (0, _merge3.default)({}, _config3.default, config);
+    if (imageWrapper) {
+        _onUIThread = false;
+        initializeData(imageWrapper);
+        return cb();
+    } else {
+        initInputStream(cb);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offDetected" id="apidoc.element.quagga.default.offDetected">
+        function <span class="apidocSignatureSpan">quagga.</span>default.offDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offDetected(callback) {
+    _events2.default.unsubscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offProcessed" id="apidoc.element.quagga.default.offProcessed">
+        function <span class="apidocSignatureSpan">quagga.</span>default.offProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offProcessed(callback) {
+    _events2.default.unsubscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onDetected" id="apidoc.element.quagga.default.onDetected">
+        function <span class="apidocSignatureSpan">quagga.</span>default.onDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onDetected(callback) {
+    _events2.default.subscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onProcessed" id="apidoc.element.quagga.default.onProcessed">
+        function <span class="apidocSignatureSpan">quagga.</span>default.onProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onProcessed(callback) {
+    _events2.default.subscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.pause" id="apidoc.element.quagga.default.pause">
+        function <span class="apidocSignatureSpan">quagga.</span>default.pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pause() {
+    _stopped = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.registerResultCollector" id="apidoc.element.quagga.default.registerResultCollector">
+        function <span class="apidocSignatureSpan">quagga.</span>default.registerResultCollector
+        <span class="apidocSignatureSpan">(resultCollector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerResultCollector(resultCollector) {
+    if (resultCollector &amp;&amp; typeof resultCollector.addResult === 'function') {
+        _resultCollector = resultCollector;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.setReaders" id="apidoc.element.quagga.default.setReaders">
+        function <span class="apidocSignatureSpan">quagga.</span>default.setReaders
+        <span class="apidocSignatureSpan">(readers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setReaders(readers) {
+    _setReaders(readers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.start" id="apidoc.element.quagga.default.start">
+        function <span class="apidocSignatureSpan">quagga.</span>default.start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start() {
+    _start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.stop" id="apidoc.element.quagga.default.stop">
+        function <span class="apidocSignatureSpan">quagga.</span>default.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stop() {
+    _stopped = true;
+    adjustWorkerPool(0);
+    if (_config.inputStream.type === "LiveStream") {
+        _camera_access2.default.release();
+        _inputStream.clearEventHandlers();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.uglyasm" id="apidoc.element.quagga.uglyasm">
+        function <span class="apidocSignatureSpan">quagga.</span>uglyasm
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uglyasm = function (grunt) {
+    grunt.registerTask('uglyasm', function() {
+        var code = fs.readFileSync('dist/quagga.js', 'utf-8'),
+            minifiedCode = fs.readFileSync('dist/quagga.min.js', 'utf-8'),
+            commentEnd = '@preserve ASM END',
+            moduleFunctionRegex = /function\s*\((\w+,\s*\w+,\s*\w+)\)\s*\{(\n?\s*\"use strict\";?)*\n?\/\*\s*\@preserve ASM BEGIN
+/,
+            commentStartIdx = code.indexOf("@preserve ASM BEGIN"),
+            asmEndIdxTmp = code.indexOf(commentEnd),
+            asmEndIdx = code.indexOf("}", asmEndIdxTmp),
+            asmCodeTmp = code.substring(commentStartIdx - Math.min(500, commentStartIdx),
+                asmEndIdx + 1),
+            asmStartIdx = asmCodeTmp.search(moduleFunctionRegex),
+            asmCode = asmCodeTmp.substring(asmStartIdx),
+            asmModule,
+            moduleArg1,
+            asmCodeMinified;
+
+        asmCodeMinified = asmCode
+            .replace(/\s*\/\/.*/g, '') // remove single-line comments
+            .replace(/\s*\/\*[^]*?\*\//g, '') // remove multi-line comments
+            .replace(/\n\s*/g, '') // remove indentation
+            .replace(/ ([+=^|&amp;]|&gt;+|&lt;+) /g, '$1') // remove spaces around operators
+            .replace(/[\r\n/]/g, ''); // remove new lines
+
+        asmModule = moduleFunctionRegex.exec(asmCode);
+        if (!asmModule) {
+            grunt.log.error("No ASM module found");
+            return;
+        }
+
+        moduleArg1 = asmModule[1];
+        grunt.log.debug(moduleArg1);
+
+        var insertionPoint = minifiedCode.search(moduleFunctionRegex);
+        if (insertionPoint === -1) {
+            grunt.log.error("No ASM module found in minified file");
+            return;
+        }
+        grunt.log.debug(insertionPoint);
+
+        var insertionPointEnd = minifiedCode.indexOf(commentEnd, insertionPoint);
+        insertionPointEnd = minifiedCode.indexOf("}", insertionPointEnd) + 1;
+
+        grunt.log.debug(insertionPointEnd);
+
+        minifiedCode = minifiedCode.substring(0, insertionPoint)
+            + asmCodeMinified
+            + minifiedCode.substring(insertionPointEnd);
+
+        fs.writeFileSync('dist/quagga.min.js', minifiedCode);
+        grunt.log.ok('dist/quagga.min.js written');
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.Gruntfile" id="apidoc.module.quagga.Gruntfile">module quagga.Gruntfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.Gruntfile.Gruntfile" id="apidoc.element.quagga.Gruntfile.Gruntfile">
+        function <span class="apidocSignatureSpan">quagga.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            },
+            integration: {
+                configFile: 'karma-integration.conf.js'
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-karma');
+
+    grunt.loadTasks('tasks');
+
+    grunt.registerTask('test', ['karma']);
+    grunt.registerTask('integrationtest', ['karma:integration']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default" id="apidoc.module.quagga.default">module quagga.default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper" id="apidoc.element.quagga.default.ImageWrapper">
+        function <span class="apidocSignatureSpan">quagga.default.</span>ImageWrapper
+        <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImageWrapper(size, data, ArrayType, initialize) {
+    if (!data) {
+        if (ArrayType) {
+            this.data = new ArrayType(size.x * size.y);
+            if (ArrayType === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        } else {
+            this.data = new Uint8Array(size.x * size.y);
+            if (Uint8Array === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        }
+    } else {
+        this.data = data;
+    }
+    this.size = size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.decodeSingle" id="apidoc.element.quagga.default.decodeSingle">
+        function <span class="apidocSignatureSpan">quagga.default.</span>decodeSingle
+        <span class="apidocSignatureSpan">(config, resultCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeSingle(config, resultCallback) {
+    var _this = this;
+
+    config = (0, _merge3.default)({
+        inputStream: {
+            type: "ImageStream",
+            sequence: false,
+            size: 800,
+            src: config.src
+        },
+        numOfWorkers:  false ? 0 : 1,
+        locator: {
+            halfSample: false
+        }
+    }, config);
+    this.init(config, function () {
+        _events2.default.once("processed", function (result) {
+            _this.stop();
+            resultCallback.call(null, result);
+        }, true);
+        _start();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Quagga.onDetected(callback)
+
+Registers a `callback(data)` function which is triggered whenever a barcode-
+pattern has been located and decoded successfully. The passed `data` object
+contains information about the decoding process including the detected code
+which can be obtained by calling `data.codeResult.code`.
+
+### Quagga.<span class="apidocCodeKeywordSpan">decodeSingle</span>(config, callback)
+
+In contrast to the calls described above, this method does not rely on
+`getUserMedia` and operates on a single image instead. The provided callback
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.offProcessed(handler)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.init" id="apidoc.element.quagga.default.init">
+        function <span class="apidocSignatureSpan">quagga.default.</span>init
+        <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(config, cb, imageWrapper) {
+    _config = (0, _merge3.default)({}, _config3.default, config);
+    if (imageWrapper) {
+        _onUIThread = false;
+        initializeData(imageWrapper);
+        return cb();
+    } else {
+        initInputStream(cb);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+also creates a `quagga.js` file in the `lib` folder.
+
+## &lt;a name="api"&gt;API&lt;/a&gt;
+
+You can check out the [examples][github_examples] to get an idea of how to
+use QuaggaJS. Basically the library exposes the following API:
+
+### &lt;a name="quaggainit"&gt;Quagga.<span class="apidocCodeKeywordSpan">init</span>(config, callback)&lt;/a&gt;
+;
+
+This method initializes the library for a given configuration `config` (see
+below) and invokes the `callback(err)` when Quagga has finished its
+bootstrapping phase. The initialization process also requests for camera
+access if real-time detection is configured. In case of an error, the `err`
+parameter is set and contains information about the cause. A potential cause
+may be the `inputStream.type` is set to `LiveStream`, but the browser does
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offDetected" id="apidoc.element.quagga.default.offDetected">
+        function <span class="apidocSignatureSpan">quagga.default.</span>offDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offDetected(callback) {
+    _events2.default.unsubscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.offProcessed(handler)
+
+In case the `onProcessed` event is no longer relevant, `offProcessed` removes
+the given `handler` from the event-queue.
+
+### Quagga.<span class="apidocCodeKeywordSpan">offDetected</span>(handler)
+
+In case the `onDetected` event is no longer relevant, `offDetected` removes
+the given `handler` from the event-queue.
+
+## &lt;a name="resultobject"&gt;The result object&lt;/a&gt;
+
+The callbacks passed into `onProcessed`, `onDetected` and `decodeSingle`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offProcessed" id="apidoc.element.quagga.default.offProcessed">
+        function <span class="apidocSignatureSpan">quagga.default.</span>offProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offProcessed(callback) {
+    _events2.default.unsubscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Quagga.decodeSingle(config, callback)
+
+In contrast to the calls described above, this method does not rely on
+`getUserMedia` and operates on a single image instead. The provided callback
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.<span class="apidocCodeKeywordSpan">offProcessed</span>(handler)
+
+In case the `onProcessed` event is no longer relevant, `offProcessed` removes
+the given `handler` from the event-queue.
+
+### Quagga.offDetected(handler)
+
+In case the `onDetected` event is no longer relevant, `offDetected` removes
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onDetected" id="apidoc.element.quagga.default.onDetected">
+        function <span class="apidocSignatureSpan">quagga.default.</span>onDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onDetected(callback) {
+    _events2.default.subscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Quagga.onProcessed(callback)
+
+This method registers a `callback(data)` function that is called for each frame
+after the processing is done. The `data` object contains detailed information
+about the success/failure of the operation. The output varies, depending whether
+the detection and/or decoding were successful or not.
+
+### Quagga.<span class="apidocCodeKeywordSpan">onDetected</span>(callback)
+
+Registers a `callback(data)` function which is triggered whenever a barcode-
+pattern has been located and decoded successfully. The passed `data` object
+contains information about the decoding process including the detected code
+which can be obtained by calling `data.codeResult.code`.
+
+### Quagga.decodeSingle(config, callback)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onProcessed" id="apidoc.element.quagga.default.onProcessed">
+        function <span class="apidocSignatureSpan">quagga.default.</span>onProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onProcessed(callback) {
+    _events2.default.subscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Quagga.stop()
+
+If the decoder is currently running, after calling `stop()` the decoder does not
+process any more images. Additionally, if a camera-stream was requested upon
+initialization, this operation also disconnects the camera.
+
+### Quagga.<span class="apidocCodeKeywordSpan">onProcessed</span>(callback)
+
+This method registers a `callback(data)` function that is called for each frame
+after the processing is done. The `data` object contains detailed information
+about the success/failure of the operation. The output varies, depending whether
+the detection and/or decoding were successful or not.
+
+### Quagga.onDetected(callback)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.pause" id="apidoc.element.quagga.default.pause">
+        function <span class="apidocSignatureSpan">quagga.default.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pause() {
+    _stopped = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.registerResultCollector" id="apidoc.element.quagga.default.registerResultCollector">
+        function <span class="apidocSignatureSpan">quagga.default.</span>registerResultCollector
+        <span class="apidocSignatureSpan">(resultCollector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerResultCollector(resultCollector) {
+    if (resultCollector &amp;&amp; typeof resultCollector.addResult === 'function') {
+        _resultCollector = resultCollector;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+});
+```
+
+### Using a ``ResultCollector``
+
+After creating a ``ResultCollector`` you have to attach it to Quagga by
+calling ``Quagga.<span class="apidocCodeKeywordSpan">registerResultCollector</span>(resultCollector)``.
+
+### Reading results
+
+After a test/recording session, you can now print the collected results which
+do not fit into a certain schema. Calling ``getResults`` on the
+``resultCollector`` returns an ``Array`` containing objects with:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.setReaders" id="apidoc.element.quagga.default.setReaders">
+        function <span class="apidocSignatureSpan">quagga.default.</span>setReaders
+        <span class="apidocSignatureSpan">(readers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setReaders(readers) {
+    _setReaders(readers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.start" id="apidoc.element.quagga.default.start">
+        function <span class="apidocSignatureSpan">quagga.default.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start() {
+    _start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }, function(err) {
+      if (err) {
+          console.log(err);
+          return
+      }
+      console.log("Initialization finished. Ready to start");
+      Quagga.<span class="apidocCodeKeywordSpan">start</span>();
+  });
+```
+
+### Quagga.start()
+
+When the library is initialized, the `start()` method starts the video-stream
+and begins locating and decoding the images.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.stop" id="apidoc.element.quagga.default.stop">
+        function <span class="apidocSignatureSpan">quagga.default.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stop() {
+    _stopped = true;
+    adjustWorkerPool(0);
+    if (_config.inputStream.type === "LiveStream") {
+        _camera_access2.default.release();
+        _inputStream.clearEventHandlers();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Quagga.start()
+
+When the library is initialized, the `start()` method starts the video-stream
+and begins locating and decoding the images.
+
+### Quagga.<span class="apidocCodeKeywordSpan">stop</span>()
+
+If the decoder is currently running, after calling `stop()` the decoder does not
+process any more images. Additionally, if a camera-stream was requested upon
+initialization, this operation also disconnects the camera.
+
+### Quagga.onProcessed(callback)
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.CameraAccess" id="apidoc.module.quagga.default.CameraAccess">module quagga.default.CameraAccess</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.CameraAccess.enumerateVideoDevices" id="apidoc.element.quagga.default.CameraAccess.enumerateVideoDevices">
+        function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>enumerateVideoDevices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enumerateVideoDevices() {
+    return (0, _mediaDevices.enumerateDevices)().then(function (devices) {
+        return devices.filter(function (device) {
+            return device.kind === 'videoinput';
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.CameraAccess.getActiveStreamLabel" id="apidoc.element.quagga.default.CameraAccess.getActiveStreamLabel">
+        function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>getActiveStreamLabel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getActiveStreamLabel() {
+    if (streamRef) {
+        var tracks = streamRef.getVideoTracks();
+        if (tracks &amp;&amp; tracks.length) {
+            return tracks[0].label;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.CameraAccess.release" id="apidoc.element.quagga.default.CameraAccess.release">
+        function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>release
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function release() {
+    var tracks = streamRef &amp;&amp; streamRef.getVideoTracks();
+    if (tracks &amp;&amp; tracks.length) {
+        tracks[0].stop();
+    }
+    streamRef = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.CameraAccess.request" id="apidoc.element.quagga.default.CameraAccess.request">
+        function <span class="apidocSignatureSpan">quagga.default.CameraAccess.</span>request
+        <span class="apidocSignatureSpan">(video, videoConstraints)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(video, videoConstraints) {
+    return pickConstraints(videoConstraints).then(initCamera.bind(null, video));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageDebug" id="apidoc.module.quagga.default.ImageDebug">module quagga.default.ImageDebug</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageDebug.drawImage" id="apidoc.element.quagga.default.ImageDebug.drawImage">
+        function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawImage
+        <span class="apidocSignatureSpan">(imageData, size, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function drawImage(imageData, size, ctx) {
+    var canvasData = ctx.getImageData(0, 0, size.x, size.y),
+        data = canvasData.data,
+        imageDataPos = imageData.length,
+        canvasDataPos = data.length,
+        value;
+
+    if (canvasDataPos / imageDataPos !== 4) {
+        return false;
+    }
+    while (imageDataPos--) {
+        value = imageData[imageDataPos];
+        data[--canvasDataPos] = 255;
+        data[--canvasDataPos] = value;
+        data[--canvasDataPos] = value;
+        data[--canvasDataPos] = value;
+    }
+    ctx.putImageData(canvasData, 0, 0);
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageDebug.drawPath" id="apidoc.element.quagga.default.ImageDebug.drawPath">
+        function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawPath
+        <span class="apidocSignatureSpan">(path, def, ctx, style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function drawPath(path, def, ctx, style) {
+    ctx.strokeStyle = style.color;
+    ctx.fillStyle = style.color;
+    ctx.lineWidth = style.lineWidth;
+    ctx.beginPath();
+    ctx.moveTo(path[0][def.x], path[0][def.y]);
+    for (var j = 1; j &lt; path.length; j++) {
+        ctx.lineTo(path[j][def.x], path[j][def.y]);
+    }
+    ctx.closePath();
+    ctx.stroke();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageDebug.drawRect" id="apidoc.element.quagga.default.ImageDebug.drawRect">
+        function <span class="apidocSignatureSpan">quagga.default.ImageDebug.</span>drawRect
+        <span class="apidocSignatureSpan">(pos, size, ctx, style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function drawRect(pos, size, ctx, style) {
+    ctx.strokeStyle = style.color;
+    ctx.fillStyle = style.color;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.strokeRect(pos.x, pos.y, size.x, size.y);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper" id="apidoc.module.quagga.default.ImageWrapper">module quagga.default.ImageWrapper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.ImageWrapper" id="apidoc.element.quagga.default.ImageWrapper.ImageWrapper">
+        function <span class="apidocSignatureSpan">quagga.default.</span>ImageWrapper
+        <span class="apidocSignatureSpan">(size, data, ArrayType, initialize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImageWrapper(size, data, ArrayType, initialize) {
+    if (!data) {
+        if (ArrayType) {
+            this.data = new ArrayType(size.x * size.y);
+            if (ArrayType === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        } else {
+            this.data = new Uint8Array(size.x * size.y);
+            if (Uint8Array === Array &amp;&amp; initialize) {
+                _array_helper2.default.init(this.data, 0);
+            }
+        }
+    } else {
+        this.data = data;
+    }
+    this.size = size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.clearArray" id="apidoc.element.quagga.default.ImageWrapper.clearArray">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.</span>clearArray
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearArray = function (array) {
+    var l = array.length;
+    while (l--) {
+        array[l] = 0;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.sample" id="apidoc.element.quagga.default.ImageWrapper.sample">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.</span>sample
+        <span class="apidocSignatureSpan">(inImg, x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sample = function (inImg, x, y) {
+    var lx = Math.floor(x);
+    var ly = Math.floor(y);
+    var w = inImg.size.x;
+    var base = ly * inImg.size.x + lx;
+    var a = inImg.data[base + 0];
+    var b = inImg.data[base + 1];
+    var c = inImg.data[base + w];
+    var d = inImg.data[base + w + 1];
+    var e = a - b;
+    x -= lx;
+    y -= ly;
+
+    var result = Math.floor(x * (y * (e - c + d) - e) + y * (c - a) + a);
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype" id="apidoc.module.quagga.default.ImageWrapper.prototype">module quagga.default.ImageWrapper.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve" id="apidoc.element.quagga.default.ImageWrapper.prototype.convolve">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>convolve
+        <span class="apidocSignatureSpan">(kernel)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convolve = function (kernel) {
+    var x,
+        y,
+        kx,
+        ky,
+        kSize = kernel.length / 2 | 0,
+        accu = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            accu = 0;
+            for (ky = -kSize; ky &lt;= kSize; ky++) {
+                for (kx = -kSize; kx &lt;= kSize; kx++) {
+                    accu += kernel[ky + kSize][kx + kSize] * this.getSafe(x + kx, y + ky);
+                }
+            }
+            this.data[y * this.size.x + x] = accu;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo" id="apidoc.element.quagga.default.ImageWrapper.prototype.copyTo">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>copyTo
+        <span class="apidocSignatureSpan">(imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copyTo = function (imageWrapper) {
+    var length = this.data.length,
+        srcData = this.data,
+        dstData = imageWrapper.data;
+
+    while (length--) {
+        dstData[length] = srcData[length];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.get" id="apidoc.element.quagga.default.ImageWrapper.prototype.get">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>get
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (x, y) {
+    return this.data[y * this.size.x + x];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe" id="apidoc.element.quagga.default.ImageWrapper.prototype.getSafe">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>getSafe
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSafe = function (x, y) {
+    var i;
+
+    if (!this.indexMapping) {
+        this.indexMapping = {
+            x: [],
+            y: []
+        };
+        for (i = 0; i &lt; this.size.x; i++) {
+            this.indexMapping.x[i] = i;
+            this.indexMapping.x[i + this.size.x] = i;
+        }
+        for (i = 0; i &lt; this.size.y; i++) {
+            this.indexMapping.y[i] = i;
+            this.indexMapping.y[i + this.size.y] = i;
+        }
+    }
+    return this.data[this.indexMapping.y[y + this.size.y] * this.size.x + this.indexMapping.x[x + this.size.x]];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>inImageWithBorder
+        <span class="apidocSignatureSpan">(imgRef, border)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inImageWithBorder = function (imgRef, border) {
+    return imgRef.x &gt;= border &amp;&amp; imgRef.y &gt;= border &amp;&amp; imgRef.x &lt; this.size.x - border &amp;&amp; imgRef.y &lt; this.size.y - border;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert" id="apidoc.element.quagga.default.ImageWrapper.prototype.invert">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>invert
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invert = function () {
+    var data = this.data,
+        length = data.length;
+
+    while (length--) {
+        data[length] = data[length] ? 0 : 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments" id="apidoc.element.quagga.default.ImageWrapper.prototype.moments">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>moments
+        <span class="apidocSignatureSpan">(labelcount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">moments = function (labelcount) {
+    var data = this.data,
+        x,
+        y,
+        height = this.size.y,
+        width = this.size.x,
+        val,
+        ysq,
+        labelsum = [],
+        i,
+        label,
+        mu11,
+        mu02,
+        mu20,
+        x_,
+        y_,
+        tmp,
+        result = [],
+        PI = Math.PI,
+        PI_4 = PI / 4;
+
+    if (labelcount &lt;= 0) {
+        return result;
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        labelsum[i] = {
+            m00: 0,
+            m01: 0,
+            m10: 0,
+            m11: 0,
+            m02: 0,
+            m20: 0,
+            theta: 0,
+            rad: 0
+        };
+    }
+
+    for (y = 0; y &lt; height; y++) {
+        ysq = y * y;
+        for (x = 0; x &lt; width; x++) {
+            val = data[y * width + x];
+            if (val &gt; 0) {
+                label = labelsum[val - 1];
+                label.m00 += 1;
+                label.m01 += y;
+                label.m10 += x;
+                label.m11 += x * y;
+                label.m02 += ysq;
+                label.m20 += x * x;
+            }
+        }
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        label = labelsum[i];
+        if (!isNaN(label.m00) &amp;&amp; label.m00 !== 0) {
+            x_ = label.m10 / label.m00;
+            y_ = label.m01 / label.m00;
+            mu11 = label.m11 / label.m00 - x_ * y_;
+            mu02 = label.m02 / label.m00 - y_ * y_;
+            mu20 = label.m20 / label.m00 - x_ * x_;
+            tmp = (mu02 - mu20) / (2 * mu11);
+            tmp = 0.5 * Math.atan(tmp) + (mu11 &gt;= 0 ? PI_4 : -PI_4) + PI;
+            label.theta = (tmp * 180 / PI + 90) % 180 - 90;
+            if (label.theta &lt; 0) {
+                label.theta += 180;
+            }
+            label.rad = tmp &gt; PI ? tmp - PI : tmp;
+            label.vec = vec2.clone([Math.cos(tmp), Math.sin(tmp)]);
+            result.push(label);
+        }
+    }
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay" id="apidoc.element.quagga.default.ImageWrapper.prototype.overlay">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>overlay
+        <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">overlay = function (canvas, scale, from) {
+    if (!scale || scale &lt; 0 || scale &gt; 360) {
+        scale = 360;
+    }
+    var hsv = [0, 1, 1];
+    var rgb = [0, 0, 0];
+    var whiteRgb = [255, 255, 255];
+    var blackRgb = [0, 0, 0];
+    var result = [];
+    var ctx = canvas.getContext('2d');
+    var frame = ctx.getImageData(from.x, from.y, this.size.x, this.size.y);
+    var data = frame.data;
+    var length = this.data.length;
+    while (length--) {
+        hsv[0] = this.data[length] * scale;
+        result = hsv[0] &lt;= 0 ? whiteRgb : hsv[0] &gt;= 360 ? blackRgb : (0, _cv_utils.hsv2rgb)(hsv, rgb);
+        data[length * 4 + 0] = result[0];
+        data[length * 4 + 1] = result[1];
+        data[length * 4 + 2] = result[2];
+        data[length * 4 + 3] = 255;
+    }
+    ctx.putImageData(frame, from.x, from.y);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.set" id="apidoc.element.quagga.default.ImageWrapper.prototype.set">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>set
+        <span class="apidocSignatureSpan">(x, y, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (x, y, value) {
+    this.data[y * this.size.x + x] = value;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.show" id="apidoc.element.quagga.default.ImageWrapper.prototype.show">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>show
+        <span class="apidocSignatureSpan">(canvas, scale)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function (canvas, scale) {
+    var ctx, frame, data, current, pixel, x, y;
+
+    if (!scale) {
+        scale = 1.0;
+    }
+    ctx = canvas.getContext('2d');
+    canvas.width = this.size.x;
+    canvas.height = this.size.y;
+    frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    data = frame.data;
+    current = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            pixel = y * this.size.x + x;
+            current = this.get(x, y) * scale;
+            data[pixel * 4 + 0] = current;
+            data[pixel * 4 + 1] = current;
+            data[pixel * 4 + 2] = current;
+            data[pixel * 4 + 3] = 255;
+        }
+    }
+    //frame.data = data;
+    ctx.putImageData(frame, 0, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImage">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImage
+        <span class="apidocSignatureSpan">(from, size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subImage = function (from, size) {
+    return new _subImage2.default(from, size, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImageAsCopy
+        <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subImageAsCopy = function (imageWrapper, from) {
+    var sizeY = imageWrapper.size.y,
+        sizeX = imageWrapper.size.x;
+    var x, y;
+    for (x = 0; x &lt; sizeX; x++) {
+        for (y = 0; y &lt; sizeY; y++) {
+            imageWrapper.data[y * sizeX + x] = this.data[(from.y + y) * this.size.x + from.x + x];
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>zeroBorder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zeroBorder = function () {
+    var i,
+        width = this.size.x,
+        height = this.size.y,
+        data = this.data;
+    for (i = 0; i &lt; width; i++) {
+        data[i] = data[(height - 1) * width + i] = 0;
+    }
+    for (i = 1; i &lt; height - 1; i++) {
+        data[i * width] = data[i * width + (width - 1)] = 0;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.convolve" id="apidoc.module.quagga.default.ImageWrapper.prototype.convolve">module quagga.default.ImageWrapper.prototype.convolve</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.convolve.convolve" id="apidoc.element.quagga.default.ImageWrapper.prototype.convolve.convolve">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>convolve
+        <span class="apidocSignatureSpan">(kernel)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convolve = function (kernel) {
+    var x,
+        y,
+        kx,
+        ky,
+        kSize = kernel.length / 2 | 0,
+        accu = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            accu = 0;
+            for (ky = -kSize; ky &lt;= kSize; ky++) {
+                for (kx = -kSize; kx &lt;= kSize; kx++) {
+                    accu += kernel[ky + kSize][kx + kSize] * this.getSafe(x + kx, y + ky);
+                }
+            }
+            this.data[y * this.size.x + x] = accu;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.copyTo" id="apidoc.module.quagga.default.ImageWrapper.prototype.copyTo">module quagga.default.ImageWrapper.prototype.copyTo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.copyTo.copyTo" id="apidoc.element.quagga.default.ImageWrapper.prototype.copyTo.copyTo">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>copyTo
+        <span class="apidocSignatureSpan">(imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copyTo = function (imageWrapper) {
+    var length = this.data.length,
+        srcData = this.data,
+        dstData = imageWrapper.data;
+
+    while (length--) {
+        dstData[length] = srcData[length];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.get" id="apidoc.module.quagga.default.ImageWrapper.prototype.get">module quagga.default.ImageWrapper.prototype.get</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.get.get" id="apidoc.element.quagga.default.ImageWrapper.prototype.get.get">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>get
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (x, y) {
+    return this.data[y * this.size.x + x];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.getSafe" id="apidoc.module.quagga.default.ImageWrapper.prototype.getSafe">module quagga.default.ImageWrapper.prototype.getSafe</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.getSafe.getSafe" id="apidoc.element.quagga.default.ImageWrapper.prototype.getSafe.getSafe">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>getSafe
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSafe = function (x, y) {
+    var i;
+
+    if (!this.indexMapping) {
+        this.indexMapping = {
+            x: [],
+            y: []
+        };
+        for (i = 0; i &lt; this.size.x; i++) {
+            this.indexMapping.x[i] = i;
+            this.indexMapping.x[i + this.size.x] = i;
+        }
+        for (i = 0; i &lt; this.size.y; i++) {
+            this.indexMapping.y[i] = i;
+            this.indexMapping.y[i + this.size.y] = i;
+        }
+    }
+    return this.data[this.indexMapping.y[y + this.size.y] * this.size.x + this.indexMapping.x[x + this.size.x]];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.inImageWithBorder" id="apidoc.module.quagga.default.ImageWrapper.prototype.inImageWithBorder">module quagga.default.ImageWrapper.prototype.inImageWithBorder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder.inImageWithBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.inImageWithBorder.inImageWithBorder">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>inImageWithBorder
+        <span class="apidocSignatureSpan">(imgRef, border)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inImageWithBorder = function (imgRef, border) {
+    return imgRef.x &gt;= border &amp;&amp; imgRef.y &gt;= border &amp;&amp; imgRef.x &lt; this.size.x - border &amp;&amp; imgRef.y &lt; this.size.y - border;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.invert" id="apidoc.module.quagga.default.ImageWrapper.prototype.invert">module quagga.default.ImageWrapper.prototype.invert</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.invert.invert" id="apidoc.element.quagga.default.ImageWrapper.prototype.invert.invert">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>invert
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invert = function () {
+    var data = this.data,
+        length = data.length;
+
+    while (length--) {
+        data[length] = data[length] ? 0 : 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.moments" id="apidoc.module.quagga.default.ImageWrapper.prototype.moments">module quagga.default.ImageWrapper.prototype.moments</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.moments.moments" id="apidoc.element.quagga.default.ImageWrapper.prototype.moments.moments">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>moments
+        <span class="apidocSignatureSpan">(labelcount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">moments = function (labelcount) {
+    var data = this.data,
+        x,
+        y,
+        height = this.size.y,
+        width = this.size.x,
+        val,
+        ysq,
+        labelsum = [],
+        i,
+        label,
+        mu11,
+        mu02,
+        mu20,
+        x_,
+        y_,
+        tmp,
+        result = [],
+        PI = Math.PI,
+        PI_4 = PI / 4;
+
+    if (labelcount &lt;= 0) {
+        return result;
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        labelsum[i] = {
+            m00: 0,
+            m01: 0,
+            m10: 0,
+            m11: 0,
+            m02: 0,
+            m20: 0,
+            theta: 0,
+            rad: 0
+        };
+    }
+
+    for (y = 0; y &lt; height; y++) {
+        ysq = y * y;
+        for (x = 0; x &lt; width; x++) {
+            val = data[y * width + x];
+            if (val &gt; 0) {
+                label = labelsum[val - 1];
+                label.m00 += 1;
+                label.m01 += y;
+                label.m10 += x;
+                label.m11 += x * y;
+                label.m02 += ysq;
+                label.m20 += x * x;
+            }
+        }
+    }
+
+    for (i = 0; i &lt; labelcount; i++) {
+        label = labelsum[i];
+        if (!isNaN(label.m00) &amp;&amp; label.m00 !== 0) {
+            x_ = label.m10 / label.m00;
+            y_ = label.m01 / label.m00;
+            mu11 = label.m11 / label.m00 - x_ * y_;
+            mu02 = label.m02 / label.m00 - y_ * y_;
+            mu20 = label.m20 / label.m00 - x_ * x_;
+            tmp = (mu02 - mu20) / (2 * mu11);
+            tmp = 0.5 * Math.atan(tmp) + (mu11 &gt;= 0 ? PI_4 : -PI_4) + PI;
+            label.theta = (tmp * 180 / PI + 90) % 180 - 90;
+            if (label.theta &lt; 0) {
+                label.theta += 180;
+            }
+            label.rad = tmp &gt; PI ? tmp - PI : tmp;
+            label.vec = vec2.clone([Math.cos(tmp), Math.sin(tmp)]);
+            result.push(label);
+        }
+    }
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.overlay" id="apidoc.module.quagga.default.ImageWrapper.prototype.overlay">module quagga.default.ImageWrapper.prototype.overlay</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.overlay.overlay" id="apidoc.element.quagga.default.ImageWrapper.prototype.overlay.overlay">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>overlay
+        <span class="apidocSignatureSpan">(canvas, scale, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">overlay = function (canvas, scale, from) {
+    if (!scale || scale &lt; 0 || scale &gt; 360) {
+        scale = 360;
+    }
+    var hsv = [0, 1, 1];
+    var rgb = [0, 0, 0];
+    var whiteRgb = [255, 255, 255];
+    var blackRgb = [0, 0, 0];
+    var result = [];
+    var ctx = canvas.getContext('2d');
+    var frame = ctx.getImageData(from.x, from.y, this.size.x, this.size.y);
+    var data = frame.data;
+    var length = this.data.length;
+    while (length--) {
+        hsv[0] = this.data[length] * scale;
+        result = hsv[0] &lt;= 0 ? whiteRgb : hsv[0] &gt;= 360 ? blackRgb : (0, _cv_utils.hsv2rgb)(hsv, rgb);
+        data[length * 4 + 0] = result[0];
+        data[length * 4 + 1] = result[1];
+        data[length * 4 + 2] = result[2];
+        data[length * 4 + 3] = 255;
+    }
+    ctx.putImageData(frame, from.x, from.y);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.set" id="apidoc.module.quagga.default.ImageWrapper.prototype.set">module quagga.default.ImageWrapper.prototype.set</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.set.set" id="apidoc.element.quagga.default.ImageWrapper.prototype.set.set">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>set
+        <span class="apidocSignatureSpan">(x, y, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (x, y, value) {
+    this.data[y * this.size.x + x] = value;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.show" id="apidoc.module.quagga.default.ImageWrapper.prototype.show">module quagga.default.ImageWrapper.prototype.show</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.show.show" id="apidoc.element.quagga.default.ImageWrapper.prototype.show.show">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>show
+        <span class="apidocSignatureSpan">(canvas, scale)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function (canvas, scale) {
+    var ctx, frame, data, current, pixel, x, y;
+
+    if (!scale) {
+        scale = 1.0;
+    }
+    ctx = canvas.getContext('2d');
+    canvas.width = this.size.x;
+    canvas.height = this.size.y;
+    frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    data = frame.data;
+    current = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            pixel = y * this.size.x + x;
+            current = this.get(x, y) * scale;
+            data[pixel * 4 + 0] = current;
+            data[pixel * 4 + 1] = current;
+            data[pixel * 4 + 2] = current;
+            data[pixel * 4 + 3] = 255;
+        }
+    }
+    //frame.data = data;
+    ctx.putImageData(frame, 0, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.subImage" id="apidoc.module.quagga.default.ImageWrapper.prototype.subImage">module quagga.default.ImageWrapper.prototype.subImage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImage.subImage" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImage.subImage">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImage
+        <span class="apidocSignatureSpan">(from, size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subImage = function (from, size) {
+    return new _subImage2.default(from, size, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.subImageAsCopy" id="apidoc.module.quagga.default.ImageWrapper.prototype.subImageAsCopy">module quagga.default.ImageWrapper.prototype.subImageAsCopy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy.subImageAsCopy" id="apidoc.element.quagga.default.ImageWrapper.prototype.subImageAsCopy.subImageAsCopy">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>subImageAsCopy
+        <span class="apidocSignatureSpan">(imageWrapper, from)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subImageAsCopy = function (imageWrapper, from) {
+    var sizeY = imageWrapper.size.y,
+        sizeX = imageWrapper.size.x;
+    var x, y;
+    for (x = 0; x &lt; sizeX; x++) {
+        for (y = 0; y &lt; sizeY; y++) {
+            imageWrapper.data[y * sizeX + x] = this.data[(from.y + y) * this.size.x + from.x + x];
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ImageWrapper.prototype.zeroBorder" id="apidoc.module.quagga.default.ImageWrapper.prototype.zeroBorder">module quagga.default.ImageWrapper.prototype.zeroBorder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder.zeroBorder" id="apidoc.element.quagga.default.ImageWrapper.prototype.zeroBorder.zeroBorder">
+        function <span class="apidocSignatureSpan">quagga.default.ImageWrapper.prototype.</span>zeroBorder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zeroBorder = function () {
+    var i,
+        width = this.size.x,
+        height = this.size.y,
+        data = this.data;
+    for (i = 0; i &lt; width; i++) {
+        data[i] = data[(height - 1) * width + i] = 0;
+    }
+    for (i = 1; i &lt; height - 1; i++) {
+        data[i * width] = data[i * width + (width - 1)] = 0;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.ResultCollector" id="apidoc.module.quagga.default.ResultCollector">module quagga.default.ResultCollector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.ResultCollector.create" id="apidoc.element.quagga.default.ResultCollector.create">
+        function <span class="apidocSignatureSpan">quagga.default.ResultCollector.</span>create
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(config) {
+    var canvas = document.createElement("canvas"),
+        ctx = canvas.getContext("2d"),
+        results = [],
+        capacity = config.capacity || 20,
+        capture = config.capture === true;
+
+    function matchesConstraints(codeResult) {
+        return capacity &amp;&amp; codeResult &amp;&amp; !contains(codeResult, config.blacklist) &amp;&amp; passesFilter(codeResult, config.filter);
+    }
+
+    return {
+        addResult: function addResult(data, imageSize, codeResult) {
+            var result = {};
+
+            if (matchesConstraints(codeResult)) {
+                capacity--;
+                result.codeResult = codeResult;
+                if (capture) {
+                    canvas.width = imageSize.x;
+                    canvas.height = imageSize.y;
+                    _image_debug2.default.drawImage(data, imageSize, ctx);
+                    result.frame = canvas.toDataURL();
+                }
+                results.push(result);
+            }
+        },
+        getResults: function getResults() {
+            return results;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Creating a ``ResultCollector``
+
+You can easily create a new ``ResultCollector`` by calling its ``create``
+method with a configuration.
+
+```javascript
+var resultCollector = Quagga.ResultCollector.<span class="apidocCodeKeywordSpan">create</span>({
+capture: true, // keep track of the image producing this result
+capacity: 20,  // maximum number of results to store
+blacklist: [   // list containing codes which should not be recorded
+    {code: "3574660239843", format: "ean_13"}],
+filter: function(codeResult) {
+    // only store results which match this constraint
+    // returns true/false
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.decodeSingle" id="apidoc.module.quagga.default.decodeSingle">module quagga.default.decodeSingle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.decodeSingle.decodeSingle" id="apidoc.element.quagga.default.decodeSingle.decodeSingle">
+        function <span class="apidocSignatureSpan">quagga.default.</span>decodeSingle
+        <span class="apidocSignatureSpan">(config, resultCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeSingle(config, resultCallback) {
+    var _this = this;
+
+    config = (0, _merge3.default)({
+        inputStream: {
+            type: "ImageStream",
+            sequence: false,
+            size: 800,
+            src: config.src
+        },
+        numOfWorkers:  false ? 0 : 1,
+        locator: {
+            halfSample: false
+        }
+    }, config);
+    this.init(config, function () {
+        _events2.default.once("processed", function (result) {
+            _this.stop();
+            resultCallback.call(null, result);
+        }, true);
+        _start();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Quagga.onDetected(callback)
+
+Registers a `callback(data)` function which is triggered whenever a barcode-
+pattern has been located and decoded successfully. The passed `data` object
+contains information about the decoding process including the detected code
+which can be obtained by calling `data.codeResult.code`.
+
+### Quagga.<span class="apidocCodeKeywordSpan">decodeSingle</span>(config, callback)
+
+In contrast to the calls described above, this method does not rely on
+`getUserMedia` and operates on a single image instead. The provided callback
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.offProcessed(handler)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.init" id="apidoc.module.quagga.default.init">module quagga.default.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.init.init" id="apidoc.element.quagga.default.init.init">
+        function <span class="apidocSignatureSpan">quagga.default.</span>init
+        <span class="apidocSignatureSpan">(config, cb, imageWrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(config, cb, imageWrapper) {
+    _config = (0, _merge3.default)({}, _config3.default, config);
+    if (imageWrapper) {
+        _onUIThread = false;
+        initializeData(imageWrapper);
+        return cb();
+    } else {
+        initInputStream(cb);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+also creates a `quagga.js` file in the `lib` folder.
+
+## &lt;a name="api"&gt;API&lt;/a&gt;
+
+You can check out the [examples][github_examples] to get an idea of how to
+use QuaggaJS. Basically the library exposes the following API:
+
+### &lt;a name="quaggainit"&gt;Quagga.<span class="apidocCodeKeywordSpan">init</span>(config, callback)&lt;/a&gt;
+;
+
+This method initializes the library for a given configuration `config` (see
+below) and invokes the `callback(err)` when Quagga has finished its
+bootstrapping phase. The initialization process also requests for camera
+access if real-time detection is configured. In case of an error, the `err`
+parameter is set and contains information about the cause. A potential cause
+may be the `inputStream.type` is set to `LiveStream`, but the browser does
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.offDetected" id="apidoc.module.quagga.default.offDetected">module quagga.default.offDetected</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offDetected.offDetected" id="apidoc.element.quagga.default.offDetected.offDetected">
+        function <span class="apidocSignatureSpan">quagga.default.</span>offDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offDetected(callback) {
+    _events2.default.unsubscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.offProcessed(handler)
+
+In case the `onProcessed` event is no longer relevant, `offProcessed` removes
+the given `handler` from the event-queue.
+
+### Quagga.<span class="apidocCodeKeywordSpan">offDetected</span>(handler)
+
+In case the `onDetected` event is no longer relevant, `offDetected` removes
+the given `handler` from the event-queue.
+
+## &lt;a name="resultobject"&gt;The result object&lt;/a&gt;
+
+The callbacks passed into `onProcessed`, `onDetected` and `decodeSingle`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.offProcessed" id="apidoc.module.quagga.default.offProcessed">module quagga.default.offProcessed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.offProcessed.offProcessed" id="apidoc.element.quagga.default.offProcessed.offProcessed">
+        function <span class="apidocSignatureSpan">quagga.default.</span>offProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offProcessed(callback) {
+    _events2.default.unsubscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Quagga.decodeSingle(config, callback)
+
+In contrast to the calls described above, this method does not rely on
+`getUserMedia` and operates on a single image instead. The provided callback
+is the same as in `onDetected` and contains the result `data` object.
+
+### Quagga.<span class="apidocCodeKeywordSpan">offProcessed</span>(handler)
+
+In case the `onProcessed` event is no longer relevant, `offProcessed` removes
+the given `handler` from the event-queue.
+
+### Quagga.offDetected(handler)
+
+In case the `onDetected` event is no longer relevant, `offDetected` removes
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.onDetected" id="apidoc.module.quagga.default.onDetected">module quagga.default.onDetected</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onDetected.onDetected" id="apidoc.element.quagga.default.onDetected.onDetected">
+        function <span class="apidocSignatureSpan">quagga.default.</span>onDetected
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onDetected(callback) {
+    _events2.default.subscribe("detected", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Quagga.onProcessed(callback)
+
+This method registers a `callback(data)` function that is called for each frame
+after the processing is done. The `data` object contains detailed information
+about the success/failure of the operation. The output varies, depending whether
+the detection and/or decoding were successful or not.
+
+### Quagga.<span class="apidocCodeKeywordSpan">onDetected</span>(callback)
+
+Registers a `callback(data)` function which is triggered whenever a barcode-
+pattern has been located and decoded successfully. The passed `data` object
+contains information about the decoding process including the detected code
+which can be obtained by calling `data.codeResult.code`.
+
+### Quagga.decodeSingle(config, callback)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.onProcessed" id="apidoc.module.quagga.default.onProcessed">module quagga.default.onProcessed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.onProcessed.onProcessed" id="apidoc.element.quagga.default.onProcessed.onProcessed">
+        function <span class="apidocSignatureSpan">quagga.default.</span>onProcessed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onProcessed(callback) {
+    _events2.default.subscribe("processed", callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Quagga.stop()
+
+If the decoder is currently running, after calling `stop()` the decoder does not
+process any more images. Additionally, if a camera-stream was requested upon
+initialization, this operation also disconnects the camera.
+
+### Quagga.<span class="apidocCodeKeywordSpan">onProcessed</span>(callback)
+
+This method registers a `callback(data)` function that is called for each frame
+after the processing is done. The `data` object contains detailed information
+about the success/failure of the operation. The output varies, depending whether
+the detection and/or decoding were successful or not.
+
+### Quagga.onDetected(callback)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.pause" id="apidoc.module.quagga.default.pause">module quagga.default.pause</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.pause.pause" id="apidoc.element.quagga.default.pause.pause">
+        function <span class="apidocSignatureSpan">quagga.default.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pause() {
+    _stopped = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.registerResultCollector" id="apidoc.module.quagga.default.registerResultCollector">module quagga.default.registerResultCollector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.registerResultCollector.registerResultCollector" id="apidoc.element.quagga.default.registerResultCollector.registerResultCollector">
+        function <span class="apidocSignatureSpan">quagga.default.</span>registerResultCollector
+        <span class="apidocSignatureSpan">(resultCollector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerResultCollector(resultCollector) {
+    if (resultCollector &amp;&amp; typeof resultCollector.addResult === 'function') {
+        _resultCollector = resultCollector;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+});
+```
+
+### Using a ``ResultCollector``
+
+After creating a ``ResultCollector`` you have to attach it to Quagga by
+calling ``Quagga.<span class="apidocCodeKeywordSpan">registerResultCollector</span>(resultCollector)``.
+
+### Reading results
+
+After a test/recording session, you can now print the collected results which
+do not fit into a certain schema. Calling ``getResults`` on the
+``resultCollector`` returns an ``Array`` containing objects with:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.setReaders" id="apidoc.module.quagga.default.setReaders">module quagga.default.setReaders</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.setReaders.setReaders" id="apidoc.element.quagga.default.setReaders.setReaders">
+        function <span class="apidocSignatureSpan">quagga.default.</span>setReaders
+        <span class="apidocSignatureSpan">(readers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setReaders(readers) {
+    _setReaders(readers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.start" id="apidoc.module.quagga.default.start">module quagga.default.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.start.start" id="apidoc.element.quagga.default.start.start">
+        function <span class="apidocSignatureSpan">quagga.default.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start() {
+    _start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }, function(err) {
+      if (err) {
+          console.log(err);
+          return
+      }
+      console.log("Initialization finished. Ready to start");
+      Quagga.<span class="apidocCodeKeywordSpan">start</span>();
+  });
+```
+
+### Quagga.start()
+
+When the library is initialized, the `start()` method starts the video-stream
+and begins locating and decoding the images.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.default.stop" id="apidoc.module.quagga.default.stop">module quagga.default.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.default.stop.stop" id="apidoc.element.quagga.default.stop.stop">
+        function <span class="apidocSignatureSpan">quagga.default.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stop() {
+    _stopped = true;
+    adjustWorkerPool(0);
+    if (_config.inputStream.type === "LiveStream") {
+        _camera_access2.default.release();
+        _inputStream.clearEventHandlers();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Quagga.start()
+
+When the library is initialized, the `start()` method starts the video-stream
+and begins locating and decoding the images.
+
+### Quagga.<span class="apidocCodeKeywordSpan">stop</span>()
+
+If the decoder is currently running, after calling `stop()` the decoder does not
+process any more images. Additionally, if a camera-stream was requested upon
+initialization, this operation also disconnects the camera.
+
+### Quagga.onProcessed(callback)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.input_stream" id="apidoc.module.quagga.input_stream">module quagga.input_stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.input_stream.createImageStream" id="apidoc.element.quagga.input_stream.createImageStream">
+        function <span class="apidocSignatureSpan">quagga.input_stream.</span>createImageStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createImageStream = function () {
+    var that = {};
+    var _config = null;
+
+    var width = 0,
+        height = 0,
+        frameIdx = 0,
+        paused = true,
+        loaded = false,
+        frame = null,
+        baseUrl,
+        ended = false,
+        size,
+        calculatedWidth,
+        calculatedHeight,
+        _eventNames = ['canrecord', 'ended'],
+        _eventHandlers = {},
+        _topRight = {x: 0, y: 0},
+        _canvasSize = {x: 0, y: 0};
+
+    function loadImages() {
+        loaded = false;
+        GetPixels(baseUrl, function(err, pixels) {
+            if (err) {
+                console.log(err);
+                exit(1);
+            }
+            loaded = true;
+            console.log(pixels.shape);
+            frame = pixels;
+            width = pixels.shape[0];
+            height = pixels.shape[1];
+            calculatedWidth = _config.size ? width/height &gt; 1 ? _config.size : Math.floor((width/height) * _config.size) : width
+;
+            calculatedHeight = _config.size ? width/height &gt; 1 ? Math.floor((height/width) * _config.size) : _config.size : height
+;
+
+            _canvasSize.x = calculatedWidth;
+            _canvasSize.y = calculatedHeight;
+
+            setTimeout(function() {
+                publishEvent("canrecord", []);
+            }, 0);
+        });
+    }
+
+    function publishEvent(eventName, args) {
+        var j,
+            handlers = _eventHandlers[eventName];
+
+        if (handlers &amp;&amp; handlers.length &gt; 0) {
+            for ( j = 0; j &lt; handlers.length; j++) {
+                handlers[j].apply(that, args);
+            }
+        }
+    }
+
+
+    that.trigger = publishEvent;
+
+    that.getWidth = function() {
+        return calculatedWidth;
+    };
+
+    that.getHeight = function() {
+        return calculatedHeight;
+    };
+
+    that.setWidth = function(width) {
+        calculatedWidth = width;
+    };
+
+    that.setHeight = function(height) {
+        calculatedHeight = height;
+    };
+
+    that.getRealWidth = function() {
+        return width;
+    };
+
+    that.getRealHeight = function() {
+        return height;
+    };
+
+    that.setInputStream = function(stream) {
+        _config = stream;
+        baseUrl = _config.src;
+        size = 1;
+        loadImages();
+    };
+
+    that.ended = function() {
+        return ended;
+    };
+
+    that.setAttribute = function() {};
+
+    that.getConfig = function() {
+        return _config;
+    };
+
+    that.pause = function() {
+        paused = true;
+    };
+
+    that.play = function() {
+        paused = false;
+    };
+
+    that.setCurrentTime = function(time) {
+        frameIdx = time;
+    };
+
+    that.addEventListener = function(event, f) {
+        if (_eventNames.indexOf(event) !== -1) {
+            if (!_eventHandlers[event]) {
+                _eventHandlers[event] = [];
+            }
+            _eventHandlers[event].push(f);
+        }
+    };
+
+    that.setTopRight = function(topRight) {
+        _topRight.x = topRight.x;
+        _topRight.y = topRight.y;
+    };
+
+    that.getTopRight = function() {
+        return _topRight;
+    };
+
+    that.setCanvasSize = function(size) {
+        _canvasSize.x = size.x;
+        _canvasSize.y = size.y;
+    };
+
+    that.getCanvasSize = function() {
+        return _canvasSize;
+    };
+
+    that.getFrame = function() {
+        if (!loaded){
+            return null;
+        }
+        return frame;
+    };
+
+    return that;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.quagga.uglyasm" id="apidoc.module.quagga.uglyasm">module quagga.uglyasm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.quagga.uglyasm.uglyasm" id="apidoc.element.quagga.uglyasm.uglyasm">
+        function <span class="apidocSignatureSpan">quagga.</span>uglyasm
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uglyasm = function (grunt) {
+    grunt.registerTask('uglyasm', function() {
+        var code = fs.readFileSync('dist/quagga.js', 'utf-8'),
+            minifiedCode = fs.readFileSync('dist/quagga.min.js', 'utf-8'),
+            commentEnd = '@preserve ASM END',
+            moduleFunctionRegex = /function\s*\((\w+,\s*\w+,\s*\w+)\)\s*\{(\n?\s*\"use strict\";?)*\n?\/\*\s*\@preserve ASM BEGIN
+/,
+            commentStartIdx = code.indexOf("@preserve ASM BEGIN"),
+            asmEndIdxTmp = code.indexOf(commentEnd),
+            asmEndIdx = code.indexOf("}", asmEndIdxTmp),
+            asmCodeTmp = code.substring(commentStartIdx - Math.min(500, commentStartIdx),
+                asmEndIdx + 1),
+            asmStartIdx = asmCodeTmp.search(moduleFunctionRegex),
+            asmCode = asmCodeTmp.substring(asmStartIdx),
+            asmModule,
+            moduleArg1,
+            asmCodeMinified;
+
+        asmCodeMinified = asmCode
+            .replace(/\s*\/\/.*/g, '') // remove single-line comments
+            .replace(/\s*\/\*[^]*?\*\//g, '') // remove multi-line comments
+            .replace(/\n\s*/g, '') // remove indentation
+            .replace(/ ([+=^|&amp;]|&gt;+|&lt;+) /g, '$1') // remove spaces around operators
+            .replace(/[\r\n/]/g, ''); // remove new lines
+
+        asmModule = moduleFunctionRegex.exec(asmCode);
+        if (!asmModule) {
+            grunt.log.error("No ASM module found");
+            return;
+        }
+
+        moduleArg1 = asmModule[1];
+        grunt.log.debug(moduleArg1);
+
+        var insertionPoint = minifiedCode.search(moduleFunctionRegex);
+        if (insertionPoint === -1) {
+            grunt.log.error("No ASM module found in minified file");
+            return;
+        }
+        grunt.log.debug(insertionPoint);
+
+        var insertionPointEnd = minifiedCode.indexOf(commentEnd, insertionPoint);
+        insertionPointEnd = minifiedCode.indexOf("}", insertionPointEnd) + 1;
+
+        grunt.log.debug(insertionPointEnd);
+
+        minifiedCode = minifiedCode.substring(0, insertionPoint)
+            + asmCodeMinified
+            + minifiedCode.substring(insertionPointEnd);
+
+        fs.writeFileSync('dist/quagga.min.js', minifiedCode);
+        grunt.log.ok('dist/quagga.min.js written');
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

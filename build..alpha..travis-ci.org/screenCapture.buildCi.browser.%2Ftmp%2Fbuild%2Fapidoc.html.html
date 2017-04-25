@@ -572,7 +572,23 @@
     }
     this.size = size;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+var imageWrapper;
+
+self.onmessage = function (e) {
+    if (e.data.cmd === 'init') {
+        var config = e.data.config;
+        config.numOfWorkers = 0;
+        imageWrapper = new Quagga.<span class="apidocCodeKeywordSpan">ImageWrapper</span>({
+            x: e.data.size.x,
+            y: e.data.size.y
+        }, new Uint8Array(e.data.imageData));
+        Quagga.init(config, ready, imageWrapper);
+        Quagga.onProcessed(onProcessed);
+    } else if (e.data.cmd === 'process') {
+        imageWrapper.data = new Uint8Array(e.data.imageData);
+...</pre></li>
     </ul>
 
 
@@ -800,7 +816,23 @@ the detection and/or decoding were successful or not.
     <li>description and source-code<pre class="apidocCodePre">function pause() {
     _stopped = true;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+that.setAttribute = function (name, value) {
+    video.setAttribute(name, value);
+};
+
+that.pause = function () {
+    video.<span class="apidocCodeKeywordSpan">pause</span>();
+};
+
+that.play = function () {
+    video.play();
+};
+
+that.setCurrentTime = function (time) {
+...</pre></li>
     </ul>
 
 
@@ -847,7 +879,23 @@ do not fit into a certain schema. Calling ``getResults`` on the
     <li>description and source-code<pre class="apidocCodePre">function setReaders(readers) {
     _setReaders(readers);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }, new Uint8Array(e.data.imageData));
+        Quagga.init(config, ready, imageWrapper);
+        Quagga.onProcessed(onProcessed);
+    } else if (e.data.cmd === 'process') {
+        imageWrapper.data = new Uint8Array(e.data.imageData);
+        Quagga.start();
+    } else if (e.data.cmd === 'setReaders') {
+        Quagga.<span class="apidocCodeKeywordSpan">setReaders</span>(e.data.readers);
+    }
+};
+
+function onProcessed(result) {
+    self.postMessage({
+        'event': 'processed',
+        imageData: imageWrapper.data,
+...</pre></li>
     </ul>
 
 
@@ -984,7 +1032,24 @@ initialization, this operation also disconnects the camera.
     }
     streamRef = null;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+start: function start() {
+    _start();
+},
+stop: function stop() {
+    _stopped = true;
+    adjustWorkerPool(0);
+    if (_config.inputStream.type === "LiveStream") {
+        __WEBPACK_IMPORTED_MODULE_7__input_camera_access__["a" /* default */].<span class="apidocCodeKeywordSpan">release
+</span>();
+        _inputStream.clearEventHandlers();
+    }
+},
+pause: function pause() {
+    _stopped = true;
+},
+onDetected: function onDetected(callback) {
+...</pre></li>
     </ul>
 
 
@@ -999,7 +1064,24 @@ initialization, this operation also disconnects the camera.
     <li>description and source-code<pre class="apidocCodePre">function request(video, videoConstraints) {
     return pickConstraints(videoConstraints).then(initCamera.bind(null, video));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        video = $viewport.querySelector("video");
+        if (!video) {
+            video = document.createElement("video");
+            $viewport.appendChild(video);
+        }
+    }
+    _inputStream = __WEBPACK_IMPORTED_MODULE_11_input_stream__["a" /* default */].createLiveStream(video);
+    __WEBPACK_IMPORTED_MODULE_7__input_camera_access__["a" /* default */].<span class="apidocCodeKeywordSpan">request<!--
+span-->(video, _config.inputStream.constraints).then(function () {
+        _inputStream.trigger("canrecord");
+    }).catch(function (err) {
+        return cb(err);
+    });
+}
+
+_inputStream.setAttribute("preload", "auto");
+...</span></pre></li>
     </ul>
 
 
@@ -1036,7 +1118,23 @@ initialization, this operation also disconnects the camera.
     ctx.putImageData(canvasData, 0, 0);
     return true;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+}
+
+return queue;
+};
+
+function grayArrayFromImage(htmlImage, offsetX, ctx, array) {
+ctx.<span class="apidocCodeKeywordSpan">drawImage</span>(htmlImage, offsetX, 0, htmlImage.width, htmlImage.height);
+var ctxData = ctx.getImageData(offsetX, 0, htmlImage.width, htmlImage.height).data;
+computeGray(ctxData, array);
+};
+
+function grayArrayFromContext(ctx, size, offset, array) {
+var ctxData = ctx.getImageData(offset.x, offset.y, size.x, size.y).data;
+computeGray(ctxData, array);
+...</pre></li>
     </ul>
 
 
@@ -1060,7 +1158,27 @@ initialization, this operation also disconnects the camera.
     ctx.closePath();
     ctx.stroke();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        function tryDecode(line) {
+var result = null,
+    i,
+    barcodeLine = __WEBPACK_IMPORTED_MODULE_0__bresenham__["a" /* default */].getBarcodeLine(inputImageWrapper, line[0
+], line[1]);
+
+if (true &amp;&amp; config.debug.showFrequency) {
+    __WEBPACK_IMPORTED_MODULE_1__common_image_debug__["a" /* default */].<span class="apidocCodeKeywordSpan">drawPath<!--
+span-->(line, { x: 'x', y: 'y' }, _canvas.ctx.overlay, { color: 'red', lineWidth: 3 });
+    __WEBPACK_IMPORTED_MODULE_0__bresenham__["a" /* default */].debug.printFrequency(barcodeLine.line, _canvas.dom.frequency
+);
+}
+
+__WEBPACK_IMPORTED_MODULE_0__bresenham__["a" /* default */].toBinaryLine(barcodeLine);
+
+if (true &amp;&amp; config.debug.showPattern) {
+    __WEBPACK_IMPORTED_MODULE_0__bresenham__["a" /* default */].debug.printPattern(barcodeLine.line, _canvas.dom.pattern
+);
+...</span></pre></li>
     </ul>
 
 
@@ -1079,7 +1197,24 @@ initialization, this operation also disconnects the camera.
     ctx.beginPath();
     ctx.strokeRect(pos.x, pos.y, size.x, size.y);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// draw all patches which are to be taken into consideration
+overAvg = 0;
+for (i = 0; i &lt; patches.length; i++) {
+    patch = patches[i];
+    overAvg += patch.rad;
+    if (true &amp;&amp; _config.debug.showPatches) {
+        __WEBPACK_IMPORTED_MODULE_3__common_image_debug__["a" /* default */].<span class="apidocCodeKeywordSpan">drawRect
+</span>(patch.pos, _subImageWrapper.size, _canvasContainer.ctx.binary, { color: "red" });
+    }
+}
+
+overAvg /= patches.length;
+overAvg = (overAvg * 180 / Math.PI + 90) % 180 - 90;
+if (overAvg &lt; 0) {
+    overAvg += 180;
+...</pre></li>
     </ul>
 
 
@@ -1114,7 +1249,23 @@ initialization, this operation also disconnects the camera.
     }
     this.size = size;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+var imageWrapper;
+
+self.onmessage = function (e) {
+    if (e.data.cmd === 'init') {
+        var config = e.data.config;
+        config.numOfWorkers = 0;
+        imageWrapper = new Quagga.<span class="apidocCodeKeywordSpan">ImageWrapper</span>({
+            x: e.data.size.x,
+            y: e.data.size.y
+        }, new Uint8Array(e.data.imageData));
+        Quagga.init(config, ready, imageWrapper);
+        Quagga.onProcessed(onProcessed);
+    } else if (e.data.cmd === 'process') {
+        imageWrapper.data = new Uint8Array(e.data.imageData);
+...</pre></li>
     </ul>
 
 
@@ -1232,7 +1383,23 @@ initialization, this operation also disconnects the camera.
     <li>description and source-code<pre class="apidocCodePre">get = function (x, y) {
     return this.data[y * this.size.x + x];
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+canvas.height = this.size.y;
+frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+data = frame.data;
+current = 0;
+for (y = 0; y &lt; this.size.y; y++) {
+    for (x = 0; x &lt; this.size.x; x++) {
+        pixel = y * this.size.x + x;
+        current = this.<span class="apidocCodeKeywordSpan">get</span>(x, y) * scale;
+        data[pixel * 4 + 0] = current;
+        data[pixel * 4 + 1] = current;
+        data[pixel * 4 + 2] = current;
+        data[pixel * 4 + 3] = 255;
+    }
+}
+//frame.data = data;
+...</pre></li>
     </ul>
 
 
@@ -1263,7 +1430,23 @@ initialization, this operation also disconnects the camera.
     }
     return this.data[this.indexMapping.y[y + this.size.y] * this.size.x + this.indexMapping.x[x + this.size.x]];
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        kSize = kernel.length / 2 | 0,
+        accu = 0;
+    for (y = 0; y &lt; this.size.y; y++) {
+        for (x = 0; x &lt; this.size.x; x++) {
+            accu = 0;
+            for (ky = -kSize; ky &lt;= kSize; ky++) {
+                for (kx = -kSize; kx &lt;= kSize; kx++) {
+                    accu += kernel[ky + kSize][kx + kSize] * this.<span class="apidocCodeKeywordSpan">getSafe</span>(x + kx, y +
+ky);
+                }
+            }
+            this.data[y * this.size.x + x] = accu;
+        }
+    }
+};
+...</pre></li>
     </ul>
 
 
@@ -1278,7 +1461,24 @@ initialization, this operation also disconnects the camera.
     <li>description and source-code<pre class="apidocCodePre">inImageWithBorder = function (imgRef, border) {
     return imgRef.x &gt;= border &amp;&amp; imgRef.y &gt;= border &amp;&amp; imgRef.x &lt; this.size.x - border &amp;&amp; imgRef.y &lt; this.size.y - border;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        line[0].x -= extension.x;
+        line[1].y += extension.y;
+        line[1].x += extension.x;
+    }
+
+    // check if inside image
+    extendLine(ext);
+    while (ext &gt; 1 &amp;&amp; (!inputImageWrapper.<span class="apidocCodeKeywordSpan">inImageWithBorder</span>(line[0], 0
+) || !inputImageWrapper.inImageWithBorder(line[1], 0))) {
+        ext -= Math.ceil(ext / 2);
+        extendLine(-ext);
+    }
+    return line;
+}
+
+function getLine(box) {
+...</pre></li>
     </ul>
 
 
@@ -1298,7 +1498,25 @@ initialization, this operation also disconnects the camera.
         data[length] = data[length] ? 0 : 1;
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (true &amp;&amp; _config.debug.boxFromPatches.showTransformedBox) {
+    __WEBPACK_IMPORTED_MODULE_3__common_image_debug__["a" /* default */].drawPath(box, { x: 0, y: 1 }, _canvasContainer
+.ctx.binary, { color: '#ff0000', lineWidth: 2 });
+}
+
+scale = _config.halfSample ? 2 : 1;
+// reverse rotation;
+transMat = mat2.<span class="apidocCodeKeywordSpan">invert</span>(transMat, transMat);
+for (j = 0; j &lt; 4; j++) {
+    vec2.transformMat2(box[j], box[j], transMat);
+}
+
+if (true &amp;&amp; _config.debug.boxFromPatches.showBB) {
+    __WEBPACK_IMPORTED_MODULE_3__common_image_debug__["a" /* default */].drawPath(box, { x: 0, y: 1 }, _canvasContainer
+.ctx.binary, { color: '#ff0000', lineWidth: 2 });
+}
+...</pre></li>
     </ul>
 
 
@@ -1386,7 +1604,23 @@ initialization, this operation also disconnects the camera.
 
     return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        rasterResult = rasterizer.rasterize(0);
+
+        if (true &amp;&amp; _config.debug.showLabels) {
+            _labelImageWrapper.overlay(_canvasContainer.dom.binary, Math.floor(360 / rasterResult.count), { x: x, y: y });
+        }
+
+        // calculate moments from the skeletonized patch
+        moments = _labelImageWrapper.<span class="apidocCodeKeywordSpan">moments</span>(rasterResult.count);
+
+        // extract eligible patches
+        patchesFound = patchesFound.concat(describePatch(moments, [i, j], x, y));
+    }
+}
+
+if (true &amp;&amp; _config.debug.showFoundPatches) {
+...</pre></li>
     </ul>
 
 
@@ -1421,7 +1655,25 @@ initialization, this operation also disconnects the camera.
     }
     ctx.putImageData(frame, from.x, from.y);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Rasterize, find individual bars
+_skelImageWrapper.zeroBorder();
+__WEBPACK_IMPORTED_MODULE_2__common_array_helper__["a" /* default */].init(_labelImageWrapper.data, 0);
+rasterizer = __WEBPACK_IMPORTED_MODULE_4__rasterizer__["a" /* default */].create(_skelImageWrapper, _labelImageWrapper
+);
+rasterResult = rasterizer.rasterize(0);
+
+if (true &amp;&amp; _config.debug.showLabels) {
+    _labelImageWrapper.<span class="apidocCodeKeywordSpan">overlay</span>(_canvasContainer.dom.binary, Math.floor(360 / rasterResult
+.count), { x: x, y: y });
+}
+
+// calculate moments from the skeletonized patch
+moments = _labelImageWrapper.moments(rasterResult.count);
+
+// extract eligible patches
+patchesFound = patchesFound.concat(describePatch(moments, [i, j], x, y));
+...</pre></li>
     </ul>
 
 
@@ -1437,7 +1689,23 @@ initialization, this operation also disconnects the camera.
     this.data[y * this.size.x + x] = value;
     return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+var path = require('path');
+var webpack = require('webpack');
+
+module.exports = function(config) {
+config.<span class="apidocCodeKeywordSpan">set</span>({
+    basePath: '',
+    frameworks: ['source-map-support', 'mocha', 'chai', 'sinon', 'sinon-chai'],
+    files: [
+        'test/test-main.js',
+        {pattern: 'test/spec/**/*.js', included: false}
+    ],
+    preprocessors: {
+...</pre></li>
     </ul>
 
 
@@ -1474,7 +1742,24 @@ initialization, this operation also disconnects the camera.
     //frame.data = data;
     ctx.putImageData(frame, 0, 0);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Creates a binary image of the current image
+*/
+function binarizeImage() {
+   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_cv_utils__["f" /* otsuThreshold */])(_currentImageWrapper
+, _binaryImageWrapper);
+   _binaryImageWrapper.zeroBorder();
+   if (true &amp;&amp; _config.debug.showCanvas) {
+       _binaryImageWrapper.<span class="apidocCodeKeywordSpan">show</span>(_canvasContainer.dom.binary, 255);
+   }
+}
+
+/**
+* Iterate over the entire image
+* extract patches
+*/
+...</pre></li>
     </ul>
 
 
@@ -1511,7 +1796,25 @@ initialization, this operation also disconnects the camera.
         }
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            result.push(points[i].point);
+        }
+    }
+    return result;
+}
+
+function skeletonize(x, y) {
+    _binaryImageWrapper.<span class="apidocCodeKeywordSpan">subImageAsCopy</span>(_subImageWrapper, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_cv_utils__
+["b" /* imageRef */])(x, y));
+    _skeletonizer.skeletonize();
+
+    // Show skeleton if requested
+    if (true &amp;&amp; _config.debug.showSkeleton) {
+        _skelImageWrapper.overlay(_canvasContainer.dom.binary, 360, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_cv_utils__
+["b" /* imageRef */])(x, y));
+    }
+}
+...</pre></li>
     </ul>
 
 
@@ -1535,7 +1838,24 @@ initialization, this operation also disconnects the camera.
         data[i * width] = data[i * width + (width - 1)] = 0;
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+* Creates a binary image of the current image
+*/
+function binarizeImage() {
+   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_cv_utils__["f" /* otsuThreshold */])(_currentImageWrapper
+, _binaryImageWrapper);
+   _binaryImageWrapper.<span class="apidocCodeKeywordSpan">zeroBorder</span>();
+   if (true &amp;&amp; _config.debug.showCanvas) {
+       _binaryImageWrapper.show(_canvasContainer.dom.binary, 255);
+   }
+}
+
+/**
+* Iterate over the entire image
+...</pre></li>
     </ul>
 
 
@@ -1766,7 +2086,24 @@ filter: function(codeResult) {
 
     return that;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function initInputStream(cb) {
+var video;
+if (_config.inputStream.type === "VideoStream") {
+    video = document.createElement("video");
+    _inputStream = __WEBPACK_IMPORTED_MODULE_11_input_stream__["a" /* default */].createVideoStream(video);
+} else if (_config.inputStream.type === "ImageStream") {
+    _inputStream = __WEBPACK_IMPORTED_MODULE_11_input_stream__["a" /* default */].<span class="apidocCodeKeywordSpan">
+createImageStream</span>();
+} else if (_config.inputStream.type === "LiveStream") {
+    var $viewport = getViewPort();
+    if ($viewport) {
+        video = $viewport.querySelector("video");
+        if (!video) {
+            video = document.createElement("video");
+            $viewport.appendChild(video);
+...</pre></li>
     </ul>
 
 

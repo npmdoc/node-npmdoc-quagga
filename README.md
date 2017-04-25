@@ -1,6 +1,6 @@
 # npmdoc-quagga
 
-#### api documentation for  [quagga (v0.11.6)](https://github.com/serratus/quaggaJS#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-quagga.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-quagga) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-quagga.svg)](https://travis-ci.org/npmdoc/node-npmdoc-quagga)
+#### basic api documentation for  [quagga (v0.11.6)](https://github.com/serratus/quaggaJS#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-quagga.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-quagga) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-quagga.svg)](https://travis-ci.org/npmdoc/node-npmdoc-quagga)
 
 #### An advanced barcode-scanner written in JavaScript
 
@@ -146,7 +146,8 @@
         "test": "cross-env BABEL_ENV=commonjs grunt test",
         "watch": "cross-env BUILD_ENV=development webpack --watch"
     },
-    "version": "0.11.6"
+    "version": "0.11.6",
+    "bin": {}
 }
 ```
 
